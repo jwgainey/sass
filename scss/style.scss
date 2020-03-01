@@ -14,19 +14,20 @@ $color-bg-light: #009fe1;
 $font-stack-primary: 'Raleway', sans-serif;
 $font-stack-secondary: 'Bree Serif', serif;
 
-$max-width: 100px;
+$max-width: 1000px;
 
-// Mixins --------------------/
-@mixin skew {
+// MIXINS ------------------------------------ /
+
+@mixin skewed {
   position: relative;
   &::after {
     content: '';
-  display: block;
-  width: 100%;
-  height: 50px; 
-  position: absolute;
-  transform: skewY(-2deg);
-  @content;
+    display: block;
+    width: 100%;
+    height: 50px; 
+    position: absolute;
+    transform: skewY(-2deg);
+    @content;
   }
 }
 
@@ -36,7 +37,6 @@ $max-width: 100px;
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /* BASE ------------------------------------------- */
 
@@ -66,13 +66,25 @@ ul {
 
 p {
   margin-bottom: 1.25em;
+  .intro & {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary;  
+  }
 }
 
 /* HEADER & FOOTER -------------------------------- */
 
 header {
   height: 460px;
-  background: linear-gradient($color-bg-light, $color-bg), url('../img/bg.jpg') no-repeat;
+  background: linear-gradient($color-bg-light, $color-bg), 
+              url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
   h1 {
@@ -86,7 +98,7 @@ header {
     font-size: 1.25em;
     margin: 0;
   }
-  @include skew{
+  @include skewed {
     background-color: $white;
     bottom: -25px;
   }
@@ -97,11 +109,12 @@ footer {
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
-  @include skew {
+  @include skewed {
     background-color: $color-shade;
     top: -25px;
   }
 }
+
 
 /* CONTAINERS ------------------------------------- */
 
@@ -128,8 +141,9 @@ footer {
     text-decoration: none;
     text-transform: uppercase;
     padding: 0.5em;
-    &:hover{
-      color: $color-accent;
+    transition: 0.3s;
+    &:hover {
+      color: $color-accent;  
     }
   }
 }
@@ -159,15 +173,10 @@ footer {
   }
 }
 
-%clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
-%btn {
+.btn-callout {
+  font-size: 1.1em;
+  background-color: $color-secondary;
+  
   color: $white;
   display: inline-block;
   font-weight: bold;
@@ -175,28 +184,22 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  &:hover {
-    color: $white;
-    opacity: 0.8;
-  }
-  &:active {
-    opacity: initial;
-  }
 }
 
-.btn {
-  &-callout {
-    @extend %btn;
-    font-size: 1.1em;
-    background-color: $color-secondary;
-  }
-  &-info {
-    @extend %btn;
-    font-size: 0.85em;
-    background-color: $color-primary;  
-    margin-top: auto;
-  }
+.btn-info {
+  font-size: 0.85em;
+  background-color: $color-primary;  
+  margin-top: auto;
+  
+  color: $white;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border-radius: 0.35em;
 }
+
 
 /* MEDIA QUERIES ---------------------------------- */
 
@@ -224,7 +227,7 @@ footer {
 
 @media (min-width: 768px) {
   .main-content {
-    @include center
+    @include center;
   }
 }
 
