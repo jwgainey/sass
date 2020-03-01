@@ -1,4 +1,4 @@
-/* BASE ------------------------------------------------- */
+/* BASE ------------------------------------------- */
 * {
   box-sizing: border-box;
 }
@@ -14,7 +14,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Bree Sarif", serif;
+  font-family: "Bree Serif", serif;
 }
 
 ul {
@@ -26,24 +26,14 @@ ul {
 p {
   margin-bottom: 1.25em;
 }
-.intro p {
-  font-size: 1.2em;
-}
 
-a {
-  color: #278da4;
-  text-decoration: none;
-}
-a:hover {
-  color: #b13c69;
-}
-
-/* HEADER & FOOTER ----------------------------------------- */
+/* HEADER & FOOTER -------------------------------- */
 header {
   height: 460px;
   background: linear-gradient(#009fe1, #3acec2), url("../img/bg.jpg") no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
+  position: relative;
 }
 header h1 {
   color: #fff;
@@ -52,10 +42,11 @@ header h1 {
   letter-spacing: 1px;
 }
 header p {
-  color: color-accent;
+  color: #eeea72;
   font-size: 1.25em;
   margin: 0;
 }
+
 header::after {
   content: "";
   display: block;
@@ -72,7 +63,9 @@ footer {
   height: 100px;
   background-color: #eee;
   margin-top: 3.5em;
+  position: relative;
 }
+
 footer::before {
   content: "";
   display: block;
@@ -84,7 +77,7 @@ footer::before {
   top: -25px;
 }
 
-/* CONTAINERS ---------------------------------------------- */
+/* CONTAINERS ------------------------------------- */
 .inner {
   padding: 0.5em 1em;
 }
@@ -94,7 +87,7 @@ footer::before {
   padding: 1em 1em 3em;
 }
 
-/* COMPONENTS ----------------------------------------------- */
+/* COMPONENTS ------------------------------------- */
 .main-nav {
   margin-top: 1em;
 }
@@ -107,7 +100,16 @@ footer::before {
   font-size: 0.85em;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.45em;
+  padding: 0.5em;
+}
+
+.img-featured {
+  width: 165px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  margin-top: 75px;
+  position: relative;
+  z-index: 100;
 }
 
 .card {
@@ -126,31 +128,24 @@ footer::before {
   color: #278da4;
 }
 
-.btn {
+.btn-info {
   color: #fff;
   display: inline-block;
+  font-size: 0.85em;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-}
-.btn-callout {
-  font-size: 1.1em;
-  background-color: #b13c69;
-}
-.btn-info {
-  font-size: 0.85em;
   background-color: #278da4;
   margin-top: auto;
 }
 
-/* MEDIA QUERIES ------------------------------------------------- */
+/* MEDIA QUERIES ---------------------------------- */
 @media (max-width: 575px) {
   header {
     height: 340px;
   }
-
   header h1 {
     font-size: 3.4em;
   }
