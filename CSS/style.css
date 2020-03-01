@@ -59,6 +59,12 @@ header::after {
 }
 
 footer {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
   padding: 2em 0 0;
   height: 100px;
   background-color: #eee;
@@ -67,12 +73,6 @@ footer {
 }
 
 footer::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 50px;
-  position: absolute;
-  transform: skewY(-2deg);
   background-color: #eee;
   top: -25px;
 }
@@ -170,8 +170,9 @@ footer::before {
 @media (min-width: 768px) {
   .main-content {
     width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (min-width: 992px) {
