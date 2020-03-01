@@ -55,7 +55,7 @@
     }
   }
     @else {
-      @media (max-width: $value) {
+      @media (min-width: $value) {
         @content;
       }
     }

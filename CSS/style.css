@@ -489,7 +489,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .main-content {
     width: 90%;
     max-width: 1000px;
@@ -509,7 +509,7 @@ a:hover {
 .intro p {
   font-size: 1.2em;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .intro {
     width: 45%;
   }
@@ -570,12 +570,12 @@ header p {
   margin: 0.35em 0 0;
   line-height: 1.25;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   .card {
     flex: 1 46%;
   }
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .card {
     flex-basis: 27.3333333333%;
   }
