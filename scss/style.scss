@@ -25,8 +25,15 @@
         'components/images';
 
 
-@for $i from 10 through 20 {
-    .box-#{$i} {
-        background-color: adjust-hue(tomato, $i * 20);
-    }
-}
+// @for $i from 10 through 20 {
+//     .box-#{$i} {
+//         background-color: adjust-hue(tomato, $i * 20);
+//     }
+// }
+
+// $teachers: ('andrew', 'alena', 'joel', 'danielle', 'nick');
+
+// @each $teacher in  $teachers {
+//     .teacher-#{$teacher}
+//         background-imgage: url('img/#{$teachers}.jpg');
+// }
