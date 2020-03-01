@@ -1,3 +1,10 @@
+$color-primary: #278da4;
+$color-secondary: #b13c69;
+$color-accent: #eeea72;
+
+$font-stack-primary: 'Raleway', sans-serif;
+$font-stack-secondary: 'Bree Sarif', serif;
+
 /* BASE ------------------------------------------------- */
 
 * {
@@ -8,14 +15,14 @@ body {
   color: #343434;
   font-size: 1rem;
   line-height: 1.5;
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-stack-primary;
   text-align: center;
   margin: 0;
 }
 
 h1,
 h2 {
-  font-family: 'Bree Serif', serif;
+  font-family: $font-stack-secondary;
 }
 
 ul {
@@ -42,6 +49,7 @@ header h1 {
 }
 
 header p {
+  color: color-accent;
   font-size: 1.25em;
   margin: 0;
 }
@@ -79,7 +87,7 @@ footer {
 }
 
 .card h1 {
-  color: #278da4; 
+  color: $color-primary; 
   margin: 0.35em 0 0;
   line-height: 1.25;
 }
@@ -93,7 +101,7 @@ footer {
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  background-color: #278da4;  
+  background-color: $color-primary;  
   margin-top: auto;
 }
 

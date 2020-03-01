@@ -14,7 +14,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Bree Serif", serif;
+  font-family: "Bree Sarif", serif;
 }
 
 ul {
@@ -39,6 +39,7 @@ header h1 {
 }
 
 header p {
+  color: color-accent;
   font-size: 1.25em;
   margin: 0;
 }
