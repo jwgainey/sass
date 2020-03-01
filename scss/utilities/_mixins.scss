@@ -43,3 +43,27 @@
   flex-wrap: $wrap;
   justify-content: $just;
 }
+
+// Media Query
+@mixin mq($break) {
+  @if $break == 'xs' {
+    @media (max-width: $break-xs) {
+      @content;
+    }
+  }
+    @else if $break == 'sm' {
+      @media (max-width: $break-s) {
+        @content;
+      }
+    }
+    @else if $break == 'med' {
+      @media (max-width: $break-m) {
+        @content;
+      }
+    }
+    @else if $break == 'lg' {
+      @media (max-width: $break-l) {
+        @content;
+      }
+    }  
+}
