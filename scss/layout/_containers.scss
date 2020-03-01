@@ -6,7 +6,7 @@
 .main-content {
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: 768px) {
+  @media (min-width: $break-m) {
       @include center;
   }
 }  
@@ -26,7 +26,7 @@
   p {
     font-size: 1.2em; 
   }  
-  @media (min-width: 992px) {
+  @media (min-width: $break-l) {
       width: 45%;
   }
 }
