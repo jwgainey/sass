@@ -25,7 +25,7 @@
 }
 
 // Rounded Elements
-@mixin roundy ($dim, $brdr) {
+@mixin roundy ($dim, $brdr: null) {
   width: $dim;
   height: $dim;
   border: $brdr;
