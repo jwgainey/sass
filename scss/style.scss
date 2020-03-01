@@ -23,3 +23,10 @@
         'components/buttons',
         'components/icons',
         'components/images';
+
+
+@for $i from 10 through 20 {
+    .box-#{$i} {
+        background-color: adjust-hue(tomato, $i * 20);
+    }
+}
