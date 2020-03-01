@@ -46,24 +46,17 @@
 
 // Media Query
 @mixin mq($break) {
-  @if $break == 'xs' {
-    @media (max-width: $break-xs) {
+  $value: map-get($breakpoints, $break);
+  $sm: map-get($breakpoints, 'sm');
+
+  @if $value < $sm {
+    @media (max-width: $value) {
       @content;
     }
   }
-    @else if $break == 'sm' {
-      @media (max-width: $break-s) {
+    @else {
+      @media (max-width: $value) {
         @content;
       }
     }
-    @else if $break == 'med' {
-      @media (max-width: $break-m) {
-        @content;
-      }
-    }
-    @else if $break == 'lg' {
-      @media (max-width: $break-l) {
-        @content;
-      }
-    }  
 }
