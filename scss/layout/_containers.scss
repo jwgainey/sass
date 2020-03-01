@@ -4,8 +4,7 @@
 
 // Main content
 .main-content {
-  display: flex;
-  flex-wrap: wrap;
+  @include flexy($wrap:wrap);
   @media (min-width: $break-m) {
       @include center(90%);
   }
