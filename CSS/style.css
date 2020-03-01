@@ -102,6 +102,9 @@ footer::before {
   text-transform: uppercase;
   padding: 0.5em;
 }
+.main-nav a:hover {
+  color: #eeea72;
+}
 
 .img-featured {
   width: 165px;
