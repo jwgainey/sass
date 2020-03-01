@@ -18,12 +18,16 @@ $max-width: 100px;
 
 // Mixins --------------------/
 @mixin skew {
-  content: '';
+  position: relative;
+  &::after {
+    content: '';
   display: block;
   width: 100%;
   height: 50px; 
   position: absolute;
   transform: skewY(-2deg);
+  @content;
+  }
 }
 
 @mixin center {
@@ -71,7 +75,6 @@ header {
   background: linear-gradient($color-bg-light, $color-bg), url('../img/bg.jpg') no-repeat;
   background-blend-mode: multiply;
   background-size: cover;
-  position: relative;
   h1 {
     color: $white;
     font-size: 4.8em;
@@ -83,27 +86,22 @@ header {
     font-size: 1.25em;
     margin: 0;
   }
+  @include skew{
+    background-color: $white;
+    bottom: -25px;
+  }
 }
 
-header::after {
-  @include skew;
-  background-color: $white;
-  bottom: -25px;
-} 
-
 footer {
-  @include  skew;
   padding: 2em 0 0;
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
-  position: relative; 
+  @include skew {
+    background-color: $color-shade;
+    top: -25px;
+  }
 }
-
-footer::before {
-  background-color: $color-shade;
-  top: -25px;
-} 
 
 /* CONTAINERS ------------------------------------- */
 
