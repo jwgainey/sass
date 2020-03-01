@@ -38,6 +38,21 @@ ul {
   margin: 0;
 }
 
+p {
+  margin-bottom: 1.25em;
+  .intro & {
+    font-size: 1.2em;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
 /* HEADER & FOOTER ----------------------------------------- */
 
 header {
@@ -57,6 +72,16 @@ header {
     font-size: 1.25em;
     margin: 0;
   }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50px; 
+    position: absolute;
+    transform: skewY(-2deg);
+    background-color: $white;
+    bottom: -25px;
+  }  
 }
 
 
@@ -68,6 +93,16 @@ footer {
   height: 100px;
   background-color: $color-shade;
   margin-top: 3.5em;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50px; 
+    position: absolute;
+    transform: skewY(-2deg);
+    background-color: $color-shade;
+    top: -25px;
+  }  
 }
 
 /* CONTAINERS ---------------------------------------------- */
@@ -116,17 +151,23 @@ footer {
 
 
 
-.btn-info {
+.btn {
   color: $white;
-  display: inline-block;
-  font-size: 0.85em;
+  display: inline-block;  
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
-  background-color: $color-primary;  
-  margin-top: auto;
+  &-callout {
+    font-size: 1.1em;
+    background-color: $color-secondary;
+  }
+  &-info {
+    font-size: 0.85em;
+    background-color: $color-primary;  
+    margin-top: auto;
+  }
 }
 
 

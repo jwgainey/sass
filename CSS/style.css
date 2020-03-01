@@ -23,6 +23,21 @@ ul {
   margin: 0;
 }
 
+p {
+  margin-bottom: 1.25em;
+}
+.intro p {
+  font-size: 1.2em;
+}
+
+a {
+  color: #278da4;
+  text-decoration: none;
+}
+a:hover {
+  color: #b13c69;
+}
+
 /* HEADER & FOOTER ----------------------------------------- */
 header {
   height: 460px;
@@ -41,12 +56,32 @@ header p {
   font-size: 1.25em;
   margin: 0;
 }
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: #fff;
+  bottom: -25px;
+}
 
 footer {
   padding: 2em 0 0;
   height: 100px;
   background-color: #eee;
   margin-top: 3.5em;
+}
+footer::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  transform: skewY(-2deg);
+  background-color: #eee;
+  top: -25px;
 }
 
 /* CONTAINERS ---------------------------------------------- */
@@ -91,15 +126,21 @@ footer {
   color: #278da4;
 }
 
-.btn-info {
+.btn {
   color: #fff;
   display: inline-block;
-  font-size: 0.85em;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
+}
+.btn-callout {
+  font-size: 1.1em;
+  background-color: #b13c69;
+}
+.btn-info {
+  font-size: 0.85em;
   background-color: #278da4;
   margin-top: auto;
 }
