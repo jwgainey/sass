@@ -7,8 +7,6 @@
   color: $color-primary-light;   
 }
 
-@each $theme, $color in $themes {
-  .icn-#{$theme} {
-    color: $color;
-  }
+.icn {
+  @include themes($themes);
 }
