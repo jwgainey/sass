@@ -159,17 +159,31 @@ footer {
   }
 }
 
-.btn-info {
+.btn-callout {
+  font-size: 1.1em;
+  background-color: $color-secondary;
+  
   color: $white;
   display: inline-block;
-  font-size: 0.85em;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
+}
+
+.btn-info {
+  font-size: 0.85em;
   background-color: $color-primary;  
   margin-top: auto;
+  
+  color: $white;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border-radius: 0.35em;
 }
 
 
